@@ -4,7 +4,6 @@ import { useAuthenticator } from '@aws-amplify/ui-react';
 import { generateClient } from "aws-amplify/data";
 import { FaTrash } from "react-icons/fa";
 import { MdModeEdit } from "react-icons/md";
-import bg from "/bg.jpg";
 
 
 const client = generateClient<Schema>();
@@ -37,8 +36,10 @@ function App() {
   
 
   return (
-    <main style={{
-      backgroundImage: `url(${bg})`}}>
+    <main 
+    // style={{
+    //   backgroundImage: "url('/bg.jpg')"}}
+      >
       <h1>{user?.signInDetails?.loginId}'s Todos</h1>
 
       <button onClick={createTodo}>+ Add a new task</button>
