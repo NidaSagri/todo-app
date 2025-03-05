@@ -1,9 +1,11 @@
-body {
+body{
   margin: 0;
-  background: url("/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;  
+}
+
+main {
   display: flex;
+  flex-direction: column;
+  background-size: cover;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   height: 100vh;
   width: 100vw;
@@ -11,11 +13,9 @@ body {
   align-items: center;
 }
 
-body::before {
+main::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
@@ -23,11 +23,6 @@ body::before {
   z-index: -1;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
 
 h1{
   font-family: cursive;
@@ -105,20 +100,19 @@ li:hover {
 .delete-icon {
   color: #ff4d4d;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
 .edit-icon:hover,
 .delete-icon:hover {
   opacity: 0.7;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
 }
 
 
+
 @media screen and (max-width: 600px) {
-  body {
-    background-size: cover; 
-    flex-direction: column; 
-    text-align: center; 
-  }
 
   h1 {
     font-size: 20px;
