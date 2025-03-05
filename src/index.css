@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: url("../src/assets/bg.jpg");
+  background: url("/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;  
   display: flex;
